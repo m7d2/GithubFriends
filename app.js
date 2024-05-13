@@ -102,8 +102,18 @@ const searchProfile = async (username) => {
     }
 };
 
+
 // Route to get the SVG content
 app.get('/svg', async (req, res) => {
+    try {
+        const svgContent = await searchProfile('m7d2');
+        res.set('Content-Type', 'image/svg+xml');
+        res.send(svgContent);
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+});
+app.get('/', async (req, res) => {
     try {
         const svgContent = await searchProfile('m7d2');
         res.set('Content-Type', 'image/svg+xml');
