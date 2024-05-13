@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+}
+
+#controls > button {
+    padding: 1.2%;
+
+}
+
+#tilemap {
+    display: none;
+}
+canvas {
+    background: cyan;
+    position: relative;
+    left: 50%;
+    translate:  -50% 0;
+    height: 352px;
+    width: 1120px;
+    image-rendering: optimizeQuality;
+    image-rendering: optimizeQuality;
+}
